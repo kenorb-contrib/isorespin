@@ -20,6 +20,10 @@ and then further developed by Linuxium (linuxium@linuxium.com.au).
 
 > Although it is expected to run the script on a Linux machine typically running 64-bit Ubuntu or a 64-bit Ubuntu based OS it also works on a Linux virtual machine on Windows (see below for further details). You will need certain packages like 'squashfs-tools' and 'xorriso' installed (use `sudo apt-get install -y squashfs-tools xorriso` to install them) plus 'zenity' if you want to use the GUI. As different Linux distros have different packages installed by default the script will first check and notify you if any other packages are required. You will also need at least 10 GB of free space but this can be on external storage (e.g. a USB) as it can be specified as a location different to where the script is run from. For some options (such as updating the kernel) you will need a working internet connection as the script needs to download software. Also the script needs to be executable which can be achieved using the 'chmod' command ('sudo chmod 755 isorespin.sh'). As the script runs some commands (e.g. mount/umount) which require root access using the 'sudo' command you will initially be prompted for your password and must already have 'sudo' privileges. Finally some restrictions: you cannot respin an ISO that is EOL (End Of Life); you cannot respin an ISO on an OS that doesn't support 'systemd' when using the '--apollo' or the '-b Linuxium' options; you also cannot respin an ISO if the ISO doesn't support 'systemd' when using the '--atom', '--apollo' or '-b Linuxium' options.
 
+Basically, on Linux, you need to install these tools:
+
+        sudo apt-get install genisoimage dosfstools squashfs-tools xorriso
+
 # Usage
 
 > Running the script is really quite simple even though there are quite a lot of features or options making it look rather complex.
