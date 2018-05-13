@@ -24,8 +24,9 @@ and then further developed by Linuxium (linuxium@linuxium.com.au).
 
 > Running the script is really quite simple even though there are quite a lot of features or options making it look rather complex.
 
-- The script's help is displayed using the command: `isorespin.sh -h`
-- The version of the script can either be displayed by entering: `isorespin.sh -v`
+> It can be run using either the shell CLI (command line interface) in a the terminal or using its GUI (graphical user interface). Not only will it generate a new ISO but it will also produce a log file which includes the options used when respinning the ISO and serves to document the respun ISO.
+
+> The script can either be run as a local script or it can be installed by copying the script to `/usr/local/bin` where it will be accessible for all users after the script has been made executable using the 'chmod' command (`sudo chmod 755 isorespin.sh`). Depending on the options and their complexity the respinning will take quite a few minutes and the script provides updates on its progress whilst running. The respun ISO is created with a new name derived from the original ISO name and includes indicators of the options used like 'persistence' or the kernel version for example with full details being written to the log file.
 
 ```
 Usage: ./isorespin.sh [ -h | -v | --check | --rolling-list ]
@@ -37,7 +38,10 @@ Usage: ./isorespin.sh [ -h | -v | --check | --rolling-list ]
        ./isorespin.sh ... --upgrade | --key  "<repo> ... " ]
 ```
 
-> The script can either be run as a local script or it can be installed by copying the script to `/usr/local/bin` where it will be accessible for all users after the script has been made executable using the 'chmod' command (`sudo chmod 755 isorespin.sh`). Depending on the options and their complexity the respinning will take quite a few minutes and the script provides updates on its progress whilst running. The respun ISO is created with a new name derived from the original ISO name and includes indicators of the options used like 'persistence' or the kernel version for example with full details being written to the log file.
+For example:
+
+- The script's help is displayed using the command: `isorespin.sh -h`
+- The version of the script can either be displayed by entering: `isorespin.sh -v`
 
 > Once the ISO has been respun it can be written to a USB using the standard `dd` command.
 
